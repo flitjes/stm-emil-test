@@ -19,6 +19,14 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(emil halst)
 
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED On)
+
+set_directory_properties(PROPERTY USE_FOLDERS ON)
+
 add_subdirectory(src)
+
+#emil_clangformat_directories(stm32-devcontainer-template DIRECTORIES ./src)
+emil_folderize_all_targets()
 
 
